@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>画板</title>
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="iconfont/iconfont.css">
+</head>
+<body>
+	<div class="container">
+		<div class="top">
+			<ul>
+				<li>
+					<div class="panel">
+						<ul>
+							<li><button class="clean tool" id="clean">清空</button></li>
+							<li class="create"><button class="create">新建</button></li>
+							<li class="save"><button><a class="save" href=''>保存</a></button></li>
+							<li class="undo"><button class="undo" id="undo">撤销</button></li>
+							<li class="recovery"><button class="recovery" id="recovery">恢复</button></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<div class="panel">
+						<ul>
+							<li class="select"><button class="select tool" id="select">选择</button></li>
+							<li class="cut"><button class="cut">裁切</button></li>
+							<li class="rotate"><button class="rotate">旋转</button></li>
+							<li class="pencil tool iconfont icon-qianbi" id="pencil"></li>
+							<li class="eraser tool iconfont icon-xiangpica" id="clear"></li>
+							<li class="text tool iconfont icon-ziti" id="edit"></li>
+						</ul>
+						<p>工具</p>
+					</div>
+				</li>
+				<li>
+					<div class="panel">
+						<ul>
+							<li class="line tool iconfont icon-line" id="line" active = 'true'></li>
+							<li class="dash tool iconfont icon--xuxian" id="dash"></li>
+							<li class="curve tool" id="curve">曲线</li>
+							<li class="rectangle tool" id="rectangle">矩形</li>
+							<li class="circle tool iconfont icon-yuan" id="circle"></li>
+							<li class="ploy tool iconfont icon-duobianxing" id="ploy"></li>
+							<li class="ployJ tool iconfont icon-wujiaoxing" id="ployJ"></li>
+						</ul>
+						<p>形状</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="bottom">
+			<div class="left-side">
+				<ul class="tools">
+					<li class="lineWidth">粗细</li>
+					<li><input class="argument" name="lineWidth" id="lineWidth" type="number" min="1" max="100" step="1" value="1"></li>
+					<li class="style">样式</li>
+					<li>
+						<select class="argument" name="style" id="style">
+							<option value="stroke">描边</option>
+							<option value="fill">填充</option>
+						</select>
+					</li>
+					<li class="lineCap">端点</li>
+					<li>
+						<select class="argument" name="lineCap" id="lineCap">
+							<option value="butt">无</option>
+							<option value="square">平端</option>
+							<option value="round">圆端</option>
+						</select>
+					</li>
+					<li class="line-style">
+						<select class="argument" name="lineStyle" id="lineStyle">
+							<option value="solid">实线</option>
+							<option value="dash">虚线</option>
+						</select>
+					</li>
+					<li class="color"><input class="argument" name="color" id="color" type="color"></li>
+					<li class="gradient">渐变</li>
+					<li class="fill">填充</li>
+					<li class="eraser tool" id="clear">橡皮檫</li>
+					<li class="straw">吸管</li>
+					<li class="border-num">边数</li>
+					<li><input class="argument" name="borderNum" id="borderNum" type="number" min="3" max="100" step="1" value="3"></li>
+					<li class="angle-num">角数</li>
+					<li><input class="argument" name="angleNum" id="angleNum" type="number" min="3" max="100" step="1" value="3"></li>
+					<li class="">字体</li>
+					<li class="fontFamily">
+						<select class="argument" name="fontFamily" id="fontFamily">
+							<option value="微软雅黑">微软雅黑</option>
+							<option value="sans-serif">sans-serif</option>
+							<option value="楷体">楷体</option>
+							<option value="隶书">隶书</option>
+							<option value="小篆">小篆</option>
+							<option value="大篆">大篆</option>
+						</select>
+					</li>
+					<li class="fontSize">字体大小</li>
+					<li><input class="argument" name="fontSize" id="fontSize" type="number" min="1" max="100" step="1" value="14"></li>
+				</ul>
+			</div>
+			<div class="main">
+				<canvas width="800" height="500">您的浏览器不支持canvas</canvas>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="js/palette.js"></script>
+<script src="js/index.js"></script>
+</html>
